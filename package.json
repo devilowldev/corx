@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lazyowldev/corex.git"
+    "url": "git+https://github.com/lazyowldev/corx.git"
   },
   "keywords": [
     "db",
@@ -22,9 +22,9 @@
   "author": "lazyowldev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lazyowldev/corex/issues"
+    "url": "https://github.com/lazyowldev/corx/issues"
   },
-  "homepage": "https://www.corex.js.org/",
+  "homepage": "https://www.corx.js.org/",
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "jsdoc": "^3.6.6",
