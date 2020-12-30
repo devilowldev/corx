@@ -1,5 +1,5 @@
 {
-  "name": "corex",
+  "name": "corx",
   "version": "0.0.1",
   "description": "This package make your create a database using better-sqlite3 quick",
   "main": "index.js",
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/lazyowldev/corex/issues"
   },
-  "homepage": "https://github.com/lazyowldev/corex#readme",
+  "homepage": "https://www.corex.js.org/",
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "jsdoc": "^3.6.6",

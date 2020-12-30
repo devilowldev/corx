@@ -1,1 +1,1 @@
-module.exports = require('./src/corex.js');
+module.exports = require('./src/corx.js');

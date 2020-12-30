@@ -1,23 +1,23 @@
-# Corex
+# Corx
 This package make your create a database using better-sqlite3 quick
 
 # Link
-Documentation: [corex.js.org](https://www.corex.js.org)
+Documentation: [corx.js.org](https://www.corx.js.org)
 
 Support: [discord.gg/hw7XPxz](https://www.discord.gg/hw7XPxz)
 
-NPM: [npmjs.com/package/corex](https://www.npmjs.com/package/corex)
+NPM: [npmjs.com/package/corx](https://www.npmjs.com/package/corx)
 
 # Example
 ```js
-const corex = require('corex')
-const db = new corex({
-    name: 'corex',
+const corx = require('corx')
+const db = new corx({
+    name: 'corx',
     dir: `${process.cwd()}/database/`
 })
 
-db.set('x', 'corex')
-// => corex
+db.set('x', 'corx')
+// => corx
 
 db.set('user', { money: 500, bot: false })
 // => { money: 500, bot: false }
@@ -29,14 +29,14 @@ db.has('user')
 // => true
 
 db.fetch('x')
-// => corex
+// => corx
 
 db.get('x')
-// => corex
+// => corx
 
 db.all()
 // => [
-//  { ID: 'x', data: 'corex' },
+//  { ID: 'x', data: 'corx' },
 //  { ID: 'user', data: { money: 500, bot: false } },
 // ]
 
@@ -49,7 +49,7 @@ if you're having troubles when installing, please follow this [troubleshooting g
 
 ## Linux & Windows
 ```bash
-npm install corex
+npm install corx
 ```
 
 ## Mac
@@ -57,7 +57,7 @@ npm install corex
 1. Install XCode
 2. Run `npm i -g node-gyp in terminal`
 3. Run `node-gyp --python /path/to/python2.7`
-4. Run `npm install corex`
+4. Run `npm install corx`
 ```
 
 # Authors

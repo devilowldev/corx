@@ -3,7 +3,7 @@ const Database = require("better-sqlite3");
 let db;
 
 let dops = {
-    name: 'corex',
+    name: 'corx',
     dir: './database/'
 }
 
@@ -16,12 +16,12 @@ var modules = {
     del: require('./modules/del.js'),
 }
 
-class corex {
+class corx {
     /**
-     * Create a corex db
+     * Create a corx db
      * @param {*} ops 
-     * @example const corex = require('corex');
-     * const db = new corex({ name: 'corex', dir: './database' })
+     * @example const corx = require('corx');
+     * const db = new corx({ name: 'corx', dir: './database' })
      */
     constructor(ops={}) {
         if(!ops) ops = dops
@@ -32,8 +32,8 @@ class corex {
 
         if(!db) db = new Database(`${ops.dir}${ops.name}.sqlite`)
 
-        if(typeof ops.name !== 'string') throw new TypeError("[COREX] > DB name must be string.")
-        else if(ops.name.includes(" ")) throw new TypeError("[COREX] > DB name can\'t have spaces")
+        if(typeof ops.name !== 'string') throw new TypeError("[CORX] > DB name must be string.")
+        else if(ops.name.includes(" ")) throw new TypeError("[CORX] > DB name can\'t have spaces")
     }
 
     /**
@@ -42,7 +42,7 @@ class corex {
      * @example db.fetch('x')
      */
     fetch(key) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
         return this.core('fetch', { id: key || {} }, this.ops.name )
     }
 
@@ -52,7 +52,7 @@ class corex {
      * @example db.get('x')
      */
     get(key) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
         return this.core('get', { id: key || {} }, this.ops.name )
     }
 
@@ -60,11 +60,11 @@ class corex {
      * Set the value in db
      * @param {*} key 
      * @param {*} value 
-     * @example db.set('x', 'corex')
+     * @example db.set('x', 'corx')
      */
     set(key, value) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
-        if(!value && value != 0) throw new TypeError('[COREX] > Please supply a value')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
+        if(!value && value != 0) throw new TypeError('[CORX] > Please supply a value')
         return this.core('set', { stringify: true, id: key, data: value || {} }, this.ops.name )
     }
 
@@ -74,7 +74,7 @@ class corex {
      * @example db.has('x')
      */
     has(key) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
         return this.core('has', { id: key || {} }, this.ops.name)
     }
 
@@ -92,7 +92,7 @@ class corex {
      * @example db.del('x')
      */
     del(key) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
         return this.core('del', { id: key || {} }, this.ops.name)
     }
 
@@ -102,7 +102,7 @@ class corex {
      * @example db.delete('x')
      */
     delete(key) {
-        if(!key) throw new TypeError('[COREX] > Please supply a key')
+        if(!key) throw new TypeError('[CORX] > Please supply a key')
         return this.core('del', { id: key || {} }, this.ops.name)
     }
 
@@ -120,7 +120,7 @@ class corex {
 
         if (params.data && params.data === Infinity)
             throw new TypeError(
-                `[COREX] > You cannot set Infinity into the database | ID: ${params.id}`
+                `[CORX] > You cannot set Infinity into the database | ID: ${params.id}`
             );
 
         if (params.stringify) {
@@ -128,7 +128,7 @@ class corex {
                 params.data = JSON.stringify(params.data);
             } catch (e) {
                 throw new TypeError(
-                    `[COREX] > Please supply a valid input | ID: ${params.id}\nError: ${e.message}`
+                    `[CORX] > Please supply a valid input | ID: ${params.id}\nError: ${e.message}`
                 );
             }
         }
@@ -143,4 +143,4 @@ class corex {
 
 }
 
-module.exports = corex
+module.exports = corx
