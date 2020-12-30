@@ -1,0 +1,33 @@
+{
+  "name": "corex",
+  "version": "0.0.1",
+  "description": "This package make your create a database using better-sqlite3 quick",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node test/main.js",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazyowldev/corex.git"
+  },
+  "keywords": [
+    "db",
+    "database",
+    "sqlite",
+    "sqlite3",
+    "quick"
+  ],
+  "author": "lazyowldev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazyowldev/corex/issues"
+  },
+  "homepage": "https://github.com/lazyowldev/corex#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "jsdoc": "^3.6.6",
+    "jsdoc-skyceil": "^1.0.6"
+  }
+}

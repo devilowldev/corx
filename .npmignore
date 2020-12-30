@@ -1,0 +1,11 @@
+# Node Modules
+node_modules/
+
+# Package-lock
+package-lock.json
+
+#docs
+docs/
+jsdoc/
+docs-template/
+welcome/
