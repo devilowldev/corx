@@ -52,7 +52,7 @@ if you're having troubles when installing, please follow this [troubleshooting g
 npm install corex
 ```
 
-## Maac
+## Mac
 ```
 1. Install XCode
 2. Run `npm i -g node-gyp in terminal`
