@@ -25,6 +25,8 @@ class corex {
      */
     constructor(ops={}) {
         if(!ops) ops = dops
+        if(!ops.name) ops.name = dops.name
+        if(!ops.dir) ops.dir = dops.dir
 
         this.ops = ops
 
